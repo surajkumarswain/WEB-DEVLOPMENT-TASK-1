@@ -1,0 +1,333 @@
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #ffffe8;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff902b;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: black;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: black;
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #8b5e3c;
+}
+
+.odia-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff902b;
+  margin: 0.5rem 0;
+  font-family: "Noto Sans Oriya", sans-serif;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.hero-image img {
+  max-width: 80%;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* ✨ shadow effect */
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.01);
+}
+
+/* Section Separator */
+.section-separator {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 4rem auto;
+  width: 80%;
+}
+
+/* History Section */
+.history-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  max-width: 1100px;
+  background-color: #fff7e6;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ff902b;
+  transition: box-shadow 0.3s;
+}
+
+.history-section:hover {
+  box-shadow: 0 6px 18px rgba(255, 144, 43, 0.3);
+}
+
+.history-buttons {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.history-buttons h2 {
+  margin-bottom: 1rem;
+  color: #c75b00;
+}
+
+.history-buttons button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  background-color: #ffa94d;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.history-buttons button:hover {
+  background-color: #ff8c1a;
+}
+
+.history-content {
+  flex: 2;
+  padding: 2rem;
+  background-color: #fffaf0;
+  border-left: 4px solid #ff902b;
+  border-radius: 12px;
+  margin-left: 2rem;
+  box-shadow: inset 0 0 10px rgba(255, 144, 43, 0.1);
+  min-height: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.history-text blockquote {
+  font-style: italic;
+  color: #cc6600;
+  margin: 1rem 0;
+  border-left: 4px solid #ffa94d;
+  padding-left: 1rem;
+  background: #fff3e6;
+  border-radius: 6px;
+}
+
+.history-text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Category Section */
+.category-carousel {
+  margin: 2rem auto 4rem;
+  max-width: 1200px;
+  height: 450px;
+  padding: 0 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #e6b45d;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+.category-carousel:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.carousel-slide {
+  background-image: url("img/bhubaneswar.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 80px;
+  transition: background-image 0.5s ease-in-out;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-slide h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.discover-btn {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.2s ease-in-out;
+  padding: 0;
+}
+
+.carousel-btn:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.carousel-btn.left {
+  left: 1.5rem;
+}
+
+.carousel-btn.right {
+  right: 1.5rem;
+}
+
+.carousel-btn svg {
+  fill: black;
+  transition: fill 0.3s ease;
+}
+
+.carousel-btn:hover svg {
+  fill: #ff902b;
+}
+
+/* About Section */
+.about-section {
+  background: linear-gradient(to right, #fffbe6, #fff3cc);
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 4rem auto;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ffd580;
+  transition: box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+  box-shadow: 0 10px 28px rgba(255, 168, 43, 0.2);
+}
+
+.about-content {
+  text-align: center;
+  color: #333;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  color: #c75b00;
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 1rem 0;
+  color: #444;
+}
+
+.about-content em {
+  font-style: italic;
+  color: #ff902b;
+}
+
+.about-content blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 2rem auto;
+  padding: 1.2rem;
+  background-color: #fff2d9;
+  border-left: 6px solid #ff902b;
+  border-radius: 8px;
+  color: #663c00;
+  max-width: 600px;
+}
+
+.author-sign {
+  margin-top: 2.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}
